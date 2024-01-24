@@ -1,4 +1,14 @@
 import os
+from pymongo.mongo_client import MongoClient
+from find_a_doctor import find_a_doctor
+from appointment import appointment
+from cancel_appointment import cancel_appointment
+from about_project import about_project
+
+db_uri = "mongodb+srv://VaradharajaPerumal:54410@varadharajaperumal.jlcs4d1.mongodb.net/?retryWrites=true&w=majority"
+client = MongoClient(db_uri)
+
+
 print("""
           #######     ###       ##       #### ######## ########     ######     ###    ########  ######## 
          ##     ##   ## ##      ##        ##  ##       ##          ##    ##   ## ##   ##     ## ##       
@@ -46,29 +56,33 @@ while True:
   4. About us
   5. Exit
   """)
+
   a = int(input("Choose an option:"))
+
   if a == 1:
-      print("\t\t\tAVAILABLE DOCTORS")
-      print("""
-      1. Dr. Karthik, MD (Medical Doctor)
-      2. Dr. Prince Sanjivy, DO (Doctor of Osteopathic Medicine)
-      3. Dr. Vasanth, DDS (Doctor of Dental Surgery)
-      4. Dr. Vijay, DVM (Doctor of Veterinary Medicine)
-      5. Dr. Gowtham, PsyD (Doctor of Psychology)
-      6. Dr. Raj Kumar, MD (Medical Doctor) 
-      """)
+      
+      find_a_doctor()
+      input()
+      os.system("cls")
+
   if a == 2:
-      print("\t\t\tENTER YOUR DETAILS")
-      nm = input("Name: ")
-      mn = int(input("Mob No: "))
-      dt = input("Date: ")
-      print("Doctors available:")
-      print()
-      for i,j in enumerate (dlist):
-         print(i+1,".",j)
-      print()
-      d = int(input("Enter doctor's id: "))
-      print(f"Hello! {nm} your appointment has been booked with {dlist[d - 1]} on {dt}.")
+      
+      dt, mn, nm, d = appointment(dlist)
+      input()
+      os.system("cls")
+
+  if a == 3:
+       
+       cancel_appointment(dlist,mn,nm,dt,d)
+       input()
+       os.system("cls")
+
+  if a == 4:
+     
+     about_project()
+     input()
+     os.system("cls")    
+     
   if a == 5:
      break  
 

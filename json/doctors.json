@@ -1,0 +1,17 @@
+[
+  {
+    "doctor_id": 1,
+    "doctor_name": "karthik",
+    "specification": "md"
+  },
+  {
+    "doctor_id": 2,
+    "doctor_name": "sanjivy",
+    "specification": "do"
+  },
+  {
+    "doctor_id": 3,
+    "doctor_name": "gowtham",
+    "specification": "phd"
+  }
+]
