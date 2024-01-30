@@ -1,17 +1,27 @@
 [
   {
-    "doctor_id": 1,
-    "doctor_name": "karthik",
-    "specification": "md"
+    "_id": 1,
+    "doctor_name": "Dr. karthik",
+    "specification": "MD (Medical Doctor)"
   },
   {
-    "doctor_id": 2,
-    "doctor_name": "sanjivy",
-    "specification": "do"
+    "_id": 2,
+    "doctor_name": "Dr. sanjivy",
+    "specification": "DO (Doctor of Osteopathic Medicine"
   },
   {
-    "doctor_id": 3,
-    "doctor_name": "gowtham",
-    "specification": "phd"
+    "_id": 3,
+    "doctor_name": "Dr. Vasanth",
+    "specification": "DDS (Doctor of Dental Surgery)"
+  },
+  {
+    "_id": 4,
+    "doctor_name": "Dr. Vijay",
+    "specification": "DVM (Doctor of Veterinary Medicine)"
+  },
+  {
+    "_id": 5,
+    "doctor_name": "Dr. Raj Kumar",
+    "specification": "MD (Medical Doctor)"
   }
 ]

@@ -7,6 +7,7 @@ from about_project import about_project
 
 db_uri = "mongodb+srv://VaradharajaPerumal:54410@varadharajaperumal.jlcs4d1.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(db_uri)
+db = client["health_project"]
 
 
 print("""
@@ -61,13 +62,13 @@ while True:
 
   if a == 1:
       
-      find_a_doctor()
+      find_a_doctor(db)
       input()
       os.system("cls")
 
   if a == 2:
       
-      dt, mn, nm, d = appointment(dlist)
+      dt, mn, nm, d = appointment(db)
       input()
       os.system("cls")
 
@@ -79,7 +80,7 @@ while True:
 
   if a == 4:
      
-     about_project()
+     about_project(db)
      input()
      os.system("cls")    
      
