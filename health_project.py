@@ -11,13 +11,13 @@ db = client["health_project"]
 
 
 print("""
-          #######     ###       ##       #### ######## ########     ######     ###    ########  ######## 
-         ##     ##   ## ##      ##        ##  ##       ##          ##    ##   ## ##   ##     ## ##       
-         ##     ##  ##   ##     ##        ##  ##       ##          ##        ##   ##  ##     ## ##       
-         ##     ## ##     ##    ##        ##  ######   ######      ##       ##     ## ########  ######   
-         ##     ## #########    ##        ##  ##       ##          ##       ######### ##   ##   ##       
-         ##     ## ##     ##    ##        ##  ##       ##          ##    ## ##     ## ##    ##  ##       
-          #######  ##     ##    ######## #### ##       ########     ######  ##     ## ##     ## ######## """)
+         
+░█████╗░░█████╗░  ██╗░░░░░██╗███████╗███████╗  ░█████╗░░█████╗░██████╗░███████╗
+██╔══██╗██╔══██╗  ██║░░░░░██║██╔════╝██╔════╝  ██╔══██╗██╔══██╗██╔══██╗██╔════╝
+██║░░██║███████║  ██║░░░░░██║█████╗░░█████╗░░  ██║░░╚═╝███████║██████╔╝█████╗░░
+██║░░██║██╔══██║  ██║░░░░░██║██╔══╝░░██╔══╝░░  ██║░░██╗██╔══██║██╔══██╗██╔══╝░░
+╚█████╔╝██║░░██║  ███████╗██║██║░░░░░███████╗  ╚█████╔╝██║░░██║██║░░██║███████╗
+░╚════╝░╚═╝░░╚═╝  ╚══════╝╚═╝╚═╝░░░░░╚══════╝  ░╚════╝░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝""")
 print()
 print()
 print()
@@ -27,34 +27,32 @@ os.system("cls")
 print("""      
                                                 
                                 
-                        ┌─────      •✧✧•     ─────┐                      
-                          WELCOME TO OA LIFE CARE                
-                        └─────      •✧✧•     ─────┘
+                       
+█░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀   ▀█▀ █▀█   █▀█ ▄▀█   █░░ █ █▀▀ █▀▀   █▀▀ ▄▀█ █▀█ █▀▀
+▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄   ░█░ █▄█   █▄█ █▀█   █▄▄ █ █▀░ ██▄   █▄▄ █▀█ █▀▄ ██▄
       
-                                      _   
-                                    _| |_ 
-                                   |_   _|
-                                     |_|   
+                                    
+                                        ██╗
+                                      ██████╗
+                                      ╚═██╔═╝
+                                        ╚═╝                           
+                                      
+                                         
+                                      
                                                                     
                             
        """)
 print()
 print(input("PRESS ANY KEY TO VIEW INFORMATIONS..."))
-dlist = [
-      "Dr. Karthik, MD (Medical Doctor)",
-      "Dr. Prince Sanjivy, DO (Doctor of Osteopathic Medicine)",
-      "Dr. Vasanth, DDS (Doctor of Dental Surgery)",
-      "Dr. Vijay, DVM (Doctor of Veterinary Medicine)",
-      "Dr. Gowtham, PsyD (Doctor of Psychology)",
-      "Dr. Raj Kumar, MD (Medical Doctor)"
-      ]
+
 while True:
+
   print("MENU")
   print("""
   1. Find a Doctor
   2. Book Appointment
   3. Cancel Appointment
-  4. About us
+  4. About Project
   5. Exit
   """)
 
@@ -68,13 +66,13 @@ while True:
 
   if a == 2:
       
-      dt, mn, nm, d = appointment(db)
+      appointment(db)
       input()
       os.system("cls")
 
   if a == 3:
        
-       cancel_appointment(dlist,mn,nm,dt,d)
+       cancel_appointment(db)
        input()
        os.system("cls")
 
